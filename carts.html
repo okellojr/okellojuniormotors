@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MOTORS SHOPPING CART</title>
+
+<!------ Google Fonts ------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS-->   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!--External JS-->
+<script src="script.js" async></script>
+
+</head>
+
+<!----External CSS----->
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<!-----FontAwsome------>
+<script src="https://kit.fontawesome.com/9d9796826b.js" crossorigin="anonymous"></script>
+
+<body>
+<!---- Bootstrap Script---->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!--Heading-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOR CART </title>
+    <header class="header">
+        <a href="#" class="logo">OKELLO MOTORS</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="carts.html">Products</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="ratings.html">Ratings</a>
+        </nav>
+      </header>
+      <style>
+        
+/* CSS for header */
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #dfe7de;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eaeee8;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #1613db;
+      padding: 35px 20px;
+    }
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 7;
+        }
+        header {
+            background-color: #ebeee5;
+            color: #0dcf8e;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        .product {
+            border: 1px solid #07ca28;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            border-image-width: 0cm;
+        
+        }
+        button {
+            background-color: #66ff00;
+            color: #0fdfbc;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b30027;
+        }
+        #cart {
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #15ee68;
+            max-width: 500px;
+        }
+        #cart h2 {
+            text-align: center;
+        }
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #8b0505;
+            padding: 0.5rem 0;
+            border-image-width: 0cm;
+            
+        }
+        /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c4e9b8;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #e20d78;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .bottom-links .links span {
+      font-size: 30px;
+      color: #e91616;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration:wavy;
+      color: #2c12c2;
+      padding: 10px 20px;
+    }
+    </style>
+ 
+ 
+<!----------------------------------------------------------------------------------->
+<!--Filter Button-->
+<div class = "filter-btns">
+  <a href="index.html"><button type="button" class="filter-btn" id="refresh"><i class="fa-solid fa-rotate" ></i> Refresh</button></a>
+   
+  <button type = "button" class = "filter-btn" id = "all">ALL</button>
+  <button type = "button" class = "filter-btn" id = "new">MAZDA</button>
+  <button type = "button" class = "filter-btn" id = "office-wear">BENZ</button>
+  <button type = "button" class = "filter-btn" id = "t-shirts">RANGE ROVERS</button>
+  <button type = "button" class = "filter-btn" id = "offers">BUGHATTI</button>
+</div>
+
+
+<!--Product Cards-->
+<section id="product-cards">
+  <div class="container-fluid">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class=" col filter-item all new ">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Ferrari 458 Italia.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Ferrari 458 Italia</h5>
+            <p class="card-text shop-item-price"> Ksh 6000990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\(°!°) 2014 Lamborghini Aventador LP700-4….jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title shop-item-title">Lamborghini</h5>
+            <p class="card-text shop-item-price"> Ksh 22209000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Bryan's Ferrari 458 Italia w_ Savini BM 12 Wheels.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">FERARI 458 ITALIA</h5>
+            <p class="card-text shop-item-price"> Ksh 57900000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\MAZDA CX-8｜クロスオーバー SUV｜マツダ (4).jpeg" class="card-img-top shop-item-image " alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">MAZDA
+              </h5>
+            <p class="card-text shop-item-price"> Ksh 30000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Apple cars ">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\MAZDA3 SEDAN.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">MAZDA SEDAN</h5>
+            <p class="card-text shop-item-price"> Ksh 59900000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Toyota Land Cruiser Prado SUV (1).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">TOYOTA LANDCRUISER</h5>
+            <p class="card-text shop-item-price">Ksh 17400000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Toyota Prado.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">LC Prado _ Toyota land cruiser prado, Toyota lc, Prado</h5>
+            <p class="card-text shop-item-price">Ksh 50000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Apple cars">
+        <div class="card h-100">
+          <img src="AI produced concept ‘apple car’ from description ‘minimalist sports car inspired by macbook’.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Ai produced Car</h5>
+            <p class="card-text shop-item-price">Ksh 100000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Yamaha R15.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Yamaha R15</h5>
+            <p class="card-text shop-item-price">Ksh 10000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\MISS_ JACKSON (La Hija De Ts).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">K34</h5>
+            <p class="card-text shop-item-price">Ksh 1500000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Cool watches">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\_5 super Bikes That Will Blow Your Mind And Your Bank Account_ (2).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">SUPER BIKES</h5>
+            <p class="card-text shop-item-price">Ksh 599000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Green Rhapsody (1).jpeg"class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Green Rhapsody</h5>
+            <p class="card-text shop-item-price">Ksh 3990000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all watches">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\bugatti divo concept sportcar (1).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">bugatti divo concept sportcar </h5>
+            <p class="card-text shop-item-price">Ksh 3690000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Cool Motorbike, triumph + down and out t100 is both burly and bonnie (1).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">COOL MOTORBIKE</h5>
+            <p class="card-text shop-item-price"> Ksh 1800900.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping  " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Car Porn_ All-Black-Everything Ferrari LaFerrari (1).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">ALL BLACK FERARI </h5>
+            <p class="card-text shop-item-price"> Ksh 245000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\fe51cc56-b600-4a7c-b711-0e829c55c16d.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Conducir un Ferrari - Regalos para Hombres</h5>
+            <p class="card-text shop-item-price">Ksh 3690000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--Shopping Cart-->
+<section class="container content-section" id="shopping-cart">
+  
+  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">MOTOR CART</h3>
+ 
+ <table class="table table-hover table-cart">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="cart-items">
+    
+     
+  </tbody>
+</table>
+
+    <div class="cart-total"> 
+      <strong class="cart-total-title">Total</strong>
+      <span  class="cart-total-pri" style="text-align: right;">Ksh</span>
+    </div>
+ 
+
+    <div class="btn-purchase" style="margin-top: 10%;">
+      <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+    </div>
+
+</section>
+ 
+<!--Footer-->
+
+
+
+
+ 
+
+<!--External JS-->
+<script src="script.js"></script>
+</main>
+<footer class="footer">
+  <div class="copy">&copy; 2023 Developer</div>
+  <div class="bottom-links">
+    <div class="links">
+      <span>More Info</span>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="carts.html">Products</a>
+      <a href="signup.htm">Sign Up</a>
+      <a href="ratings.html">Ratings</a>
+    </div>
+    
+    <div class="links">
+      <span>Social Links</span>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

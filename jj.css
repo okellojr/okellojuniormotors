@@ -1,0 +1,94 @@
+/* Style the Contact Us section */
+#contact-us {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  h2 {
+    color: #19d408;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the Contact Information section */
+  .contact-details h3 {
+    color: #eb1b1b;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Style the Contact Form section */
+  .contact-form h3 {
+    color: #39cc0d;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    color: #320dda;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bed115;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #ce1332;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  

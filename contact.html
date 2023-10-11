@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+</head>
+<header class="header">
+  <a href="#" class="logo">OKELLO MOTORS</a>
+  <nav class="nav-items">
+    <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="carts.html">Products</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="ratings.html">Ratings</a>
+  </nav>
+</header>
+<body>
+  <div class="container">
+    <div style="text-align:center">
+      CONTACT US
+      <p>Swing by for a cup of coffee, or leave us a message:</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="Custom Bugatti RV and other concepts show what the supercar’s DNA would look like across categories - Yanko Design.jpeg" style="width:100%">
+      </div>
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="kenya">KENYA</option>
+            <option value="uganda">TANZANIA</option>
+            <option value="tanzania">UGANDA</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #bef008;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  text-emphasis-color: "yellow";
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: rgb(202, 17, 226);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #da0d1e;
+}
+
+/* CSS for header */
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e1e9e0;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eaeee9;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #1613db;
+      padding: 35px 20px;
+    }
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: hsl(180, 7%, 92%);
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* CSS for footer */
+.footer {
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c4e9b8;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #e20d78;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .bottom-links .links span {
+      font-size: 30px;
+      color: #e91616;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration:wavy;
+      color: #2c12c2;
+      padding: 10px 20px;
+    }
+
+  </style>
+</body>
+</main>
+<footer class="footer">
+  <div class="copy">&copy; 2023 Developer</div>
+  <div class="bottom-links">
+    <div class="links">
+      <span>More Info</span>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="carts.html">Products</a>
+      <a href="signup.htm">Sign Up</a>
+      <a href="ratings.html">Ratings</a>
+    </div>
+    
+    <div class="links">
+      <span>Social Links</span>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKELLO MOTORS</title>
+    <header class="header">
+        <a href="#" class="logo">OKELLO MOTORS</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="carts.html">Products</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="ratings.html">Ratings</a>
+        </nav>
+      </header>
+    <style>
+        
+/* CSS for header */
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e7eee7;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #2a0bb6;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5faf3;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #1613db;
+      padding: 35px 20px;
+    }
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:hsl(180, 10%, 94%)
+        }
+        .product {
+            border: 1px solid #0de794;
+            padding: 1rem;
+            margin: 1rem;
+            text-align:center;
+        }
+        .rating {
+            color: #9c0532;
+            font-size: 2.5rem;
+        }
+        .rating input[type="number"] {
+            width: 100px;
+        }
+        /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c4e9b8;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #e20d78;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .bottom-links .links span {
+      font-size: 30px;
+      color: #e91616;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration:wavy;
+      color: #2c12c2;
+      padding: 10px 20px;
+    }
+    </style>
+</head>
+<body bgcolor="white">
+    <!-- Product 1 -->
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Description of Product 1.</p>
+        <p>Price: KSH1000.00</p>
+        <div class="rating">
+            <span>Rating:</span>
+            <input type="number" min="1" max="5" value="5" id="product1-rating">
+            <button onclick="submitRating('product1-rating')">Submit</button>
+            <p>Average Rating: <span id="product1-average-rating">5.0</span></p>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Description of Product 2.</p>
+        <p>Price: KSH500.00</p>
+        <div class="rating">
+            <span>Rating:</span>
+            <input type="number" min="1" max="5" value="4" id="product2-rating">
+            <button onclick="submitRating('product2-rating')">Submit</button>
+            <p>Average Rating: <span id="product2-average-rating">4.0</span></p>
+        </div>
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Description of Product 3.</p>
+            <p>Price: KSH10000.00</p>
+            <div class="rating">
+                <span>Rating:</span>
+                <input type="number" min="1" max="5" value="5" id="product3-rating">
+                <button onclick="submitRating('product3-rating')">Submit</button>
+                <p>Average Rating: <span id="product1-average-rating">5.0</span></p>
+            </div>
+            <div class="product">
+                <h2>Product 4</h2>
+                <p>Description of Product 4.</p>
+                <p>Price: KSH50000.00</p>
+                <div class="rating">
+                    <span>Rating:</span>
+                    <input type="number" min="1" max="5" value="5" id="product4-rating">
+                    <button onclick="submitRating('product4-rating')">Submit</button>
+                    <p>Average Rating: <span id="product1-average-rating">5.0</span></p>
+                </div>
+    </div>
+
+    <script>
+        // Object to store product ratings
+        const productRatings = {
+            product1: { ratings: [], average: 5.0 },
+            product2: { ratings: [], average: 4.0 }
+        };
+
+        // Function to submit a rating for a product
+        function submitRating(inputId) {
+            const ratingInput = document.getElementById(inputId);
+            const productId = inputId.replace('-rating', ''); // Extract the product ID
+            const rating = parseFloat(ratingInput.value);
+            
+            // Validate the rating (between 1 and 5)
+            if (isNaN(rating) || rating < 1 || rating > 5) {
+                alert('Please enter a valid rating between 1 and 5.');
+                return;
+            }
+            
+            // Add the rating to the product's ratings array
+            productRatings[productId].ratings.push(rating);
+
+            // Calculate the new average rating for the product
+            const totalRatings = productRatings[productId].ratings.length;
+            const totalRatingSum = productRatings[productId].ratings.reduce((sum, value) => sum + value, 0);
+            const newAverage = totalRatingSum / totalRatings;
+            
+            // Update the average rating display
+            const averageRatingElement = document.getElementById(productId + '-average-rating');
+            averageRatingElement.textContent = newAverage.toFixed(1);
+            
+            // Reset the rating input
+            ratingInput.value = '';
+        }
+    </script>
+      <</main>
+      <footer class="footer">
+        <div class="copy">&copy; 2023 Developer</div>
+        <div class="bottom-links">
+          <div class="links">
+            <span>More Info</span>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="carts.html">Products</a>
+            <a href="signup.htm">Sign Up</a>
+            <a href="ratings.html">Ratings</a>
+          </div>
+          
+          <div class="links">
+            <span>Social Links</span>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
+
+

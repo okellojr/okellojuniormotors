@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OKELLO MOTORS</title>
+  <!------ Google Fonts ------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS-->   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!--External JS-->
+<script src="script.js" async></script>
+
+</head>
+
+<!----External CSS----->
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<!-----FontAwsome------>
+<script src="https://kit.fontawesome.com/9d9796826b.js" crossorigin="anonymous"></script>
+
+<body>
+<!---- Bootstrap Script---->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+/* For Mobile */
+@media screen and (max-width: 540px) {
+    .view {
+        width: 400px;
+    }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .view {
+        width: 600px;
+    }
+}
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0f7f0;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #c3dabc;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #2d0fda;
+      padding: 35px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("3c6dce3b-8df1-46b9-bb49-c3a65f8ba6f4.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #0ae00a;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #44a7e0;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 20px;
+      color: #1c2dc0;
+      border-radius: 100%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 5px;
+      color: #c3f7cc93;
+      text-transform: uppercase;
+      margin: 5px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 30px;
+      color: #5707d8;
+      margin: 20px 40px;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 10px;
+      border-top: 2px solid #0da3ad;
+      background-color: #d3dbdb;
+    }
+
+    .about-me img {
+      width: 100px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #f7121d;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 30px;
+      color: #4f10e2;
+      margin: 10px 0;
+    }
+     /* CSS for styling */
+     body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 7;
+        }
+        header {
+            background-color: #a3e210;
+            color: #0dcf8e;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        .product {
+            border: 1px solid #07ca28;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            border-image-width: 0cm;
+        
+        }
+        button {
+            background-color: #66ff00;
+            color: #0fdfbc;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b30027;
+        }
+        #cart {
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #15ee68;
+            max-width: 500px;
+        }
+        #cart h2 {
+            text-align: center;
+        }
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #8b0505;
+            padding: 0.5rem 0;
+            border-image-width: 0cm;
+            
+        }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c4e9b8;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #e20d78;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 50px;
+    }
+
+    .bottom-links .links span {
+      font-size: 30px;
+      color: #e91616;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration:wavy;
+      color: #2c12c2;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body bgcolor="grey">
+  <header class="header">
+    <a href="#" class="logo">OKELLO MOTORS</a>
+    <nav class="nav-items">
+      <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="carts.html">Products</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="ratings.html">Ratings</a>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>OKELLO MOTORS</h1>
+      <p>OKELLO MOTORS DEALS WITH A VARIETY OF VARIOUS MOTORS SUCH AS MOTORVEHICLES,MOTORBIKES, ELECTRIC BIKES ETC</p>
+      <button><a href="signup.html">Sign Up</a></button>
+    </div>
+    <div class="achievements">
+      <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">Products</p>
+        <p class="work-text">All motors of various types are found here at fair prices compared to other companies which deals with MOTORS</p>
+      </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>I am an IT specialist .The CEO and Founder of OKELLO MOTORS which came to light 3 years ago</p>
+      </div>
+      <img src="IMG-20230921-WA0110.jpg" alt="me">
+    </div>
+    
+  </main>
+
+  <section>
+
+    <h2 style="text-align:center">Featured Products</h2>
+
+<!--Product Cards-->
+<section id="product-cards">
+  <div class="container-fluid">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class=" col filter-item all new ">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\LC Prado _ Toyota land cruiser prado, Toyota lc, Prado.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">LC PRADO  TOYOTA LANDCRUISER</h5>
+            <p class="card-text shop-item-price"> Ksh 6000990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Conducir un Ferrari - Regalos para Hombres.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title shop-item-title">FERARI-REGALOS,</h5>
+            <p class="card-text shop-item-price"> Ksh 22209000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\MAZDA CX-8｜クロスオーバー SUV｜マツダ (4).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">MAZDA CX-8</h5>
+            <p class="card-text shop-item-price"> Ksh 57900000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\LibertyWalk Ferrari 458 Italia (via).jpeg" class="card-img-top shop-item-image " alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Car Porn_ All-Black-Everything Ferrari LaFerrari 458 ITALIA (1)
+              </h5>
+            <p class="card-text shop-item-price"> Ksh 30000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Apple cars ">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\Custom Bugatti RV and other concepts show what the supercar’s DNA would look like across categories - Yanko Design.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">CUSTOM BUGHATTI RV</h5>
+            <p class="card-text shop-item-price"> Ksh 59900000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\bugatti divo concept sportcar (1).jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">BUGHATTI DIVO</h5>
+            <p class="card-text shop-item-price">Ksh 17400000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class=" col filter-item all Iphones">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\bef991e3-23c1-4653-bdbb-83283c898356.jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">LC Prado _ Toyota land cruiser prado, Toyota lc, Prado</h5>
+            <p class="card-text shop-item-price">Ksh 500000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all Apple cars">
+        <div class="card h-100">
+          <img src="C:\Users\elvis\Downloads\MOTORS\(°!°) 2014 Lamborghini Aventador LP700-4….jpeg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">LAMBORGHINI</h5>
+            <p class="card-text shop-item-price">Ksh 100000000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--Shopping Cart-->
+<section class="container content-section" id="shopping-cart">
+  
+  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">MOTOR CART</h3>
+ 
+ <table class="table table-hover table-cart">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="cart-items">
+    
+     
+  </tbody>
+</table>
+
+    <div class="cart-total"> 
+      <strong class="cart-total-title">Total</strong>
+      <span  class="cart-total-pri" style="text-align: right;">Ksh</span>
+    </div>
+ 
+
+    <div class="btn-purchase" style="margin-top: 10%;">
+      <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+    </div>
+
+</section>
+  </section>
+  <footer class="footer">
+    <div class="copy">&copy; 2023 Developer</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="carts.html">Products</a>
+        <a href="signup.htm">Sign Up</a>
+        <a href="ratings.html">Ratings</a>
+      </div>
+      
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

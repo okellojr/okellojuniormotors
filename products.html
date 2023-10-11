@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOR CARTS </title>
+    <header class="header">
+        <a href="#" class="logo">OKELLO MOTORS</a>
+        <nav class="nav-items">
+          <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="carts.html">Products</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="ratings.html">Ratings</a>
+        </nav>
+      </header>
+    <style>
+        
+/* CSS for header */
+.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #28d311;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #41d415;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #1613db;
+      padding: 35px 20px;
+    }
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            padding: 7;
+        }
+        header {
+            background-color: #a3e210;
+            color: #0dcf8e;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        .product {
+            border: 1px solid #07ca28;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            border-image-width: 0cm;
+        
+        }
+        button {
+            background-color: #66ff00;
+            color: #0fdfbc;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b30027;
+        }
+        #cart {
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #15ee68;
+            max-width: 500px;
+        }
+        #cart h2 {
+            text-align: center;
+        }
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #8b0505;
+            padding: 0.5rem 0;
+            border-image-width: 0cm;
+            
+        }
+    </style>
+</head>
+<nav>
+    <a href="search.html">Search Products</a>
+</nav>
+<body bgcolor="white">
+    <header>
+        <h1>OKELLO APPLE STORE</h1>
+    </header>
+    <div class="container">
+    
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="T-Shirts by Rawedate.jpg">
+            <p>Description of Product 1.</p>
+            <p>Price: KSH1000.00</p>
+            <button onclick="addToCart('Product 1', 1000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="JBL PartyBox 710 Powered Bluetooth speaker with light display.jpg">
+            <h2>JBL PartyBox 710 </h2>
+            <p>JBL PartyBox 710 Powered Bluetooth speaker with light display</p>
+            <p>Price: KSH500.00</p>
+            <button onclick="addToCart('Product 2', 500.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Amazon_de_ Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr.jpg">
+            <h2>"Amazon_de_ Günstige Preise für Elektronik </h2>
+            <p>Amazon_de_ Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & meh.</p>
+            <p>Price: KSH10000.00</p>
+            <button onclick="addToCart('Product 3', 10000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Qi Wireless Charging Charger Dock Holder for Apple.jpg">
+            <h2>Qi Wireless Charging Charger Dock Holder for Apple</h2>
+            <p>Qi Wireless Charging Charger Dock Holder for Apple</p>
+            <p>Price: KSH50000.00</p>
+            <button onclick="addToCart('Product 4', 50000.00)">Add to Cart</button>
+        </div>
+<div
+        class="product">
+        <img src="Men's watch dedicated to the distinguished.jpg">
+            <h2>Men's watch dedicated to the distinguished</h2>
+            <p>Men's watch dedicated to the distinguished</p>
+            <p>Price: KSH50000.00</p>
+            <button onclick="addToCart('Product 4', 50000.00)">Add to Cart</button>
+    </div>
+    <div
+        class="product">
+        <img src="Pigalle x Beats by Dre Team up for Limited Edition Studio Wireless Headphones.jpg">
+            <h2>Pigalle x Beats by Dre Team up for Limited Edition Studio Wireless Headphones</h2>
+            <p>Pigalle x Beats by Dre Team up for Limited Edition Studio Wireless Headphones</p>
+            <p>Price: KSH50000.00</p>
+            <button onclick="addToCart('Product 4', 50000.00)">Add to Cart</button>
+    </div>
+    <div
+        class="product">
+        <img src="AI produced concept ‘apple car’ from description ‘minimalist sports car inspired by macbook’.jpg">
+            <h2>AI produced concept ‘apple car’</h2>
+            <p>AI produced concept ‘apple car’ from description ‘minimalist sports car inspired by macbook’</p>
+            <p>Price: KSH50000.00</p>
+            <button onclick="addToCart('AI produced concept ‘apple car’', 50000.00)">Add to Cart</button>
+    </div>
+    <div
+        class="product">
+        <img src="714360c1-6ecc-4afc-9a9c-6b370d1d4534.jpg">
+            <h2>Noma sana</h2>
+            <p>Marvelous.</p>
+            <p>Price: KSH50000.00</p>
+            <button onclick="addToCart('Noma sana', 50000.00)">Add to Cart</button>
+    </div>
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here using JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart( Iphone, KSH10000) {
+            const item = { name: Iphone,KSH10000: KSH10000 };
+            cart.push(Iphone);
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.id = 'apple watch';
+                listItem.innerHTML = `
+                    <span>KSH{watch}</span>
+                    <span>KSH{KSH 80,000.00}</span>
+                `;
+                cartItemsElement.appendChild(listItem);
+                total += item.price;
+            });
+
+            const totalElement = document.createElement('li');
+            totalElement.id = 'WOOFFER';
+            totalElement.innerHTML = `
+                <span>Total:</span>
+                <span>KSH{10000.00}</span>
+            `;
+            cartItemsElement.appendChild(totalElement);
+        }
+    </script>
+</body>
+</html>
